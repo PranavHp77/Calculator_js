@@ -1,0 +1,130 @@
+html {
+  font-size: 150%;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.cal_display {
+  background-color: white;
+  color: black;
+  width: 16rem;
+  padding: 0.75rem 1rem;
+  text-align: right;
+  font-size: 1.6rem;
+}
+
+.screen {
+  width: 16rem;
+  height: 2rem;
+  pointer-events: none;
+  border: none;
+}
+
+.cal_key {
+  background-color: white;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(4, auto);
+  grid-template-areas:
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal";
+}
+
+.cal_key > button {
+  border: 0;
+}
+
+.one {
+  grid-area: one;
+  height: 60px;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+  height: 60px;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  height: 60px;
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.zero {
+  grid-area: zero;
+  height: 60px;
+}
+
+.decimal {
+  grid-area: decimal;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.equal {
+  grid-area: equal;
+  background-color: #4690ff;
+}
+
+.equal:hover,
+.equal:focus {
+  background-color: #7dcbff;
+}
+
+[data-type="operator"] {
+  height: 60px;
+  font-size: 0.75rem;
+  background-color: #dfdddd;
+}
+
+[data-type="operator"]:hover,
+[data-type="operator"]:focus {
+  background: #c6cfdc;
+}
+
+.number:hover,
+.number:focus {
+  background: #c0c0c0;
+}
